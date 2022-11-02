@@ -1,0 +1,21 @@
+Select Firstname
+From Staff
+where salary between 1500 and 1900
+/* Practice */
+
+select name
+from films 
+where production = 'Marvel Studios' AND year >=
+2010
+order by Name
+
+Select Teamname, country
+From Teams
+where country IN ('Spain', 'England', 'Germany');
+
+Select Concat(Firstname,' ',Lastname)as
+fullname, salary*12+experience*500 AS total
+From Staff ORDER By TOTAL
+
+Select AVG(score) From sam_grades where
+semester = 1
