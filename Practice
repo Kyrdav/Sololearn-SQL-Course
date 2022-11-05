@@ -19,3 +19,29 @@ From Staff ORDER By TOTAL
 
 Select AVG(score) From sam_grades where
 semester = 1
+
+select * FROM desserts 
+Where name LIKE '%Chocolate%'
+
+Select * from FOODS
+Where fatpercentage < (select avg(fatpercentage) from foods);
+
+SELECT customers.ID, customers.Name, orders.Name, orders.Amount
+FROM customers, orders
+WHERE customers.ID=orders.Customer_ID
+ORDER BY customers.ID;
+
+Select Students.ID, Students.Firstname,
+Students.Lastname, Teachers.Lastname as teacher
+From students, teachers
+WHERE Students.Teacherid=Teachers.ID
+ORDER BY Students.ID
+
+SELECT ct.ID, ct.Name, ord.Name, ord.Amount
+FROM customers AS ct, orders AS ord
+WHERE ct.ID=ord.Customer_ID
+ORDER BY ct.ID;
+
+SELECT column_name(s)
+FROM table1 INNER JOIN table2 
+ON table1.column_name=table2.column_name;
